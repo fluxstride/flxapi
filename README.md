@@ -8,7 +8,31 @@
 
 ### POST method routes and their us
 >"/person" - it is used to create a new document in the database collection.
-<p>Note: The request body should be an object with the following keys 
+<p>Note: The request body must be an object containing the following keys ("name","email","country") and these keys can have any value of your choice.
+<p>Below is an illustration of how the request body should be.
+
+```
+{
+    "name": <name value>,
+    "email": <email value>,
+    "country": <country value>
+}
+```
+
+>"/people" - it is used to create a new set of documents.
+<p>Note: The request body must be an array of objects contianing the following keys ("name","email","country") and the keys can have any value of your choice.
+<p>Below is an illustration of how the request body should be.
+
+```
+[
+    {
+        "name": <name value>,
+        "email": <email value>,                                                                              "country": <country value>                                                                       }, 
+    {                                                                                                        "name": <name value>,                                                                                "email": <email value>,                                                                              "country": <country value>                                                                       },
+    {                                                                                                        "name": <name value>,                                                                                "email": <email value>,                                                                              "country": <country value>                                                                       }
+]
+```
+
 
 ### GET method routes and their use
 >"/person/:id" - it is used to read/fetch the document with the specified id. Use this id "609d265862db0e00155e5dcd" for test.

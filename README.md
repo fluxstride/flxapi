@@ -8,7 +8,7 @@
 
 ### POST method routes and their us
 >"/person" - it is used to create a new document in the database collection.
-Note: The request body should be an object with the following keys 
+<p>Note: The request body should be an object with the following keys 
 
 ### GET method routes and their use
 >"/person/:id" - it is used to read/fetch the document with the specified id. Use this id "609d265862db0e00155e5dcd" for test.

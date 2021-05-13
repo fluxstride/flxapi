@@ -18,10 +18,12 @@
 <p>Below is an illustration of how the request body should be.</p>
 
 ```     
-{
-    "name" : <name value>,
-    "email" : <email value>,
-    "country" : <country value>
+{   "query": <database query>,
+    "update":{
+                 "name" : <name value>,
+                 "email" : <email value>,
+                 "country" : <country value
+	     {
 }
 ```
 

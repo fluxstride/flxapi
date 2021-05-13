@@ -14,7 +14,7 @@
 
 >"/people" - used to update documents that match the specified query in the request body. 
 
-<p>N/B: The request body must be in JSON format, the '<database query>' should ve</p>
+<p>N/B: The request body must be in JSON format, the 'database query' should ve</p>
 <p>Below is an illustration of how the request body should be.</p>
 
 ```     

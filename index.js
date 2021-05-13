@@ -261,32 +261,6 @@ app.delete("/people/:id", (req, res) => {
     });
 });
 
-app.delete("/people",(req,res)=>{
-	client.connect((err, connectedClient) => {
-	        let db = connectedClient.db("samuel");
-	
-	        //error handler
-	        let query = req.body
-	
-	
-	        //querying the database
-	        db.collection("db").deleteMany(
-	            query,
-	            (err, result) => {
-	                if (err) {
-	                    return res.status(500).json({ message: err });
-	                }
-	                /*else if(!result["value"]){
-	                    return res.status(404).json({message:"can't find a person with that id"})
-	                }*/
-	                      return res.status(200).json({
-	                    message: "Document deleted successfully",
-	                    data: {deletedDocument :result}
-	                });
-	            },
-	        );
-	    });
-})
 
 app.listen(port, () => {
     console.log("server listening to port " + port);

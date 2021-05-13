@@ -75,5 +75,5 @@
 
 ### DELETE methods routes
 
->"/people/:id" - used to update the document with the specified id in the database collection.
+>"/people/:id" - used to delete the document with the specified id in the database collection.
 

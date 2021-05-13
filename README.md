@@ -18,7 +18,8 @@
 <p>Below is an illustration of how the request body should be.</p>
 
 ```     
-{   "query": <database query>,
+{   
+    "query": <database query>,
     "update":{
                  "name" : <name value>,
                  "email" : <email value>,

@@ -34,13 +34,17 @@ app.post("/person", (req, res) => {
                 country: person.country,
             },
             (err, data) => {
+                
                 if (err) {
                     return res.status(500).json({ message: err });
                 }
                 return res.status(200).json({
                     message: "A new document has been created succesfully",
                     data: data.ops[0],
-                });
+                })
+                if(!req.body){
+                	res.status(500).json(message:"request body can't be empty")
+                }
             },
         );
     });

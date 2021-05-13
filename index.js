@@ -38,7 +38,7 @@ app.post("/person", (req, res) => {
                 if (err) {
                     return res.status(500).json({ message: err });
                 }
-                if(!person.name && !person.email !person.country){
+                if(!person.name && !person.email && !person.country){
                     return res.status(500).json({message:"request body can't be empty"})
                 }
                 return res.status(200).json({

@@ -6,7 +6,9 @@
 ## Routes
 
 ### GET routes and their uses
-> 
+>"/person/:id" - it is used to read/fetch the document with the specified id. Use this id for test(609d265862db0e00155e5dcd)
+
+>"/people" - it is used to read/fetch all documents in the database collection.
 
 ### PUT method routes
 
@@ -15,7 +17,7 @@
 
 ```
 {
-  ...key-valu-pairs 
+  <key-value pairs> 
 }
 ```
 

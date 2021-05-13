@@ -39,7 +39,7 @@ app.post("/person", (req, res) => {
                     return res.status(500).json({ message: err });
                 }
                 if(!person){
-                    return res.status(500).json(message:"request body can't be empty")
+                    return res.status(500).json({message:"request body can't be empty"})
                 }
                 return res.status(200).json({
                     message: "A new document has been created succesfully",
@@ -64,6 +64,7 @@ app.post("/people", (req, res) => {
             if (err) {
                 return res.status(500).json({ message: err });
             }
+            
             return res.status(200).json({
                 message: "A new set of documents have been created",
                 data: {

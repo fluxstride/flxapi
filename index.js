@@ -37,7 +37,7 @@ app.post("/person", (req, res) => {
                 if (err) {
                     return res.status(500).json({ message: err });
                 }
-                if(!person.name && !person.email && !person.country && typeof person === "string"){
+                if((!person.name && !person.email && !person.country) || typeof person === "string"){
                     return res.status(500).json({message:"Problem with the request body"})
                 }
                 return res.status(200).json({

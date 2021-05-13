@@ -15,7 +15,7 @@
 >"/people" - used to update documents that match the specified query in the request body. 
 
 <p>N/B: The <queryObject> must be in JSON format and the request body must be an object which contains the key-value pairs you wish to use in initiating the update.</p>
-Below is an illustration of how the request body should be.
+<p>Below is an illustration of how the request body should be.</p>
 ``` 
 {
         "name" : <name value>,

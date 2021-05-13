@@ -17,13 +17,13 @@
 <p>N/B: The <queryObject> must be in JSON format and the request body must be an object which contains the key-value pairs you wish to use in initiating the update.</p>
 <p>Below is an illustration of how the request body should be.</p>
 
- ```     
-        {
-	   "name" : <name value>,
-           "email" : <email value>,
-           "country" : <country value>
-	}
- ```
+```     
+{
+	"name" : <name value>,
+        "email" : <email value>,
+        "country" : <country value>
+}
+```
 
 
 

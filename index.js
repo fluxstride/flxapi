@@ -111,7 +111,7 @@ app.get("/people", (req, res) => {
             .toArray((err, result) => {
                 if (!result.length) {
                     return res.status(404).json({
-                        message: "cannot find anything",
+                        message: "Database is empty",
                     });
                 }
                 if (err) {

@@ -64,9 +64,10 @@ app.post("/people", (req, res) => {
             if (err) {
                 return res.status(500).json({ message: err });
             }
-            if(!people[0]){
+            
+            /*if(){
             	return res.status(500).json({message:"Problem with the request body"})
-            }
+            }*/
             return res.status(200).json({
                 message: "A new set of documents have been created",
                 data: {

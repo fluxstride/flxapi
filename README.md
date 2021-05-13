@@ -7,7 +7,7 @@
 
 ### POST method routes and their use
 
-> **`"/person"`** - it is used to create a new document in the database collection.
+> __"/person"__ - it is used to create a new document in the database collection.
 
 <p>Note: The request body must be an object containing the following keys ("name","email","country") and these keys can have any value of your choice.
 <p>Below is an illustration of how the request body should be.

@@ -56,7 +56,7 @@
 
 ```
 {
-  <key-value pairs> 
+    <key-value pairs> 
 }
 ```
 

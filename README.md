@@ -30,17 +30,17 @@
     {
         "name": <name value>,
         "email": <email value>,
-        "country": <country-value>
+        "country": <country value>
     },
     {
         "name": <name value>,
         "email": <email value>,
-        "country": <country-value>
+        "country": <country value>
     },
     {
         "name": <name value>,
         "email": <email value>,
-        "country": <country-value>
+        "country": <country value>
     }
 ]
 ```
@@ -51,7 +51,7 @@
 
 > "/people" - it is used to read/fetch all documents in the database collection.
 
-### PUT method routes
+### PUT method routes and their use
 
 > "/people/:id" - it is used to update the document with the specified id in the database collection. The request body must be an object which contains the key-value pairs you wish to update.
 
@@ -59,7 +59,7 @@
 
 ```
 {
-  <key-value pairs>
+    <key-value pairs>
 }
 ```
 
@@ -74,6 +74,12 @@
 }
 ```
 
+<<<<<<< HEAD
+
 ### DELETE methods routes
 
-> "/people/:id" - used to update the document with the specified id in the database collection.
+> # "/people/:id" - used to update the document with the specified id in the database collection.
+
+### DELETE methods routes and their use
+
+> "/people/:id" - used to delete the document with the specified id in the database collection.

@@ -276,9 +276,9 @@ app.delete("/people",(req,res)=>{
 	                if (err) {
 	                    return res.status(500).json({ message: err });
 	                }
-	                else if(!result["value"]){
+	                /*else if(!result["value"]){
 	                    return res.status(404).json({message:"can't find a person with that id"})
-	                }
+	                }*/
 	                      return res.status(200).json({
 	                    message: "Document deleted successfully",
 	                    data: {deletedDocument :result}

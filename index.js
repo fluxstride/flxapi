@@ -26,9 +26,6 @@ app.post("/person", (req, res) => {
         let db = connectedClient.db("samuel");
 
         let person = req.body;
-        if (!person.name && !person.email && !person.country && person === "string")){
-        	return res.status(500).json({message:"Problem with the request body"})
-        }
         db.collection("db").insertOne(
             {
                 name: person.name,

@@ -10,7 +10,7 @@ app.use(express.json());
 let client = new MongoClient(connectionString, { useUnifiedTopology: true });
 
 app.get("/",(req,res)=>{
-	res.send("Welcome to flxapi")
+	res.send("Hello welcome to flxapi")
 })
 
 

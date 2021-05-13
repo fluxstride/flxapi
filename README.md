@@ -63,7 +63,7 @@
 
 
 
-# DELETE methods routes
+### DELETE methods routes
 
 >"/people/:id" - used to update the document with the specified id in the database collection.
 

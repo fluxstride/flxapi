@@ -38,7 +38,7 @@ app.post("/person", (req, res) => {
                     return res.status(500).json({ message: err });
                 }
                 return res.status(200).json({
-                    message: "A new document has been added succesfully",
+                    message: "A new document has been created succesfully",
                     data: data.ops[0],
                 });
             },
@@ -61,7 +61,7 @@ app.post("/people", (req, res) => {
                 return res.status(500).json({ message: err });
             }
             return res.status(200).json({
-                message: "A new set of documents have been added",
+                message: "A new set of documents have been created",
                 data: data.ops,
             });
         });

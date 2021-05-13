@@ -38,6 +38,9 @@ app.post("/person", (req, res) => {
                 if (err) {
                     return res.status(500).json({ message: err });
                 }
+                if(!person.name && !person.email && !person.country){
+                    return res.status(500).json({message:"Problem with the request body"})
+                }
                 return res.status(200).json({
                     message: "A new document has been created succesfully",
                     data: data.ops[0],

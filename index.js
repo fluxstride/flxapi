@@ -1,7 +1,7 @@
 let express = require("express");
 let { MongoClient, ObjectId } = require("mongodb");
 let bodyparser = require("body-parser");
-let connectionString = "mongodb+srv://admin:<password>@apis.eqlrf.mongodb.net/api1?retryWrites=true&w=majority";
+let connectionString = "mongodb+srv://admin:admin@apis.eqlrf.mongodb.net/api1?retryWrites=true&w=majority";
 
 let app = express();
 let port = process.env.PORT || 4000;

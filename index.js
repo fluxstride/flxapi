@@ -1,6 +1,5 @@
 let express = require("express");
 let { MongoClient, ObjectId } = require("mongodb");
-let bodyparser = require("body-parser");
 let connectionString =
     "mongodb+srv://admin:admin@apis.eqlrf.mongodb.net/api1?retryWrites=true&w=majority";
 
@@ -39,7 +38,7 @@ app.post("/person", (req, res) => {
                     return res.status(500).json({ message: err });
                 }
                 return res.status(200).json({
-                    message: "A new person has been added successfully",
+                    message: "A new document has been added succesfully",
                     data: data.ops[0],
                 });
             },
@@ -62,7 +61,7 @@ app.post("/people", (req, res) => {
                 return res.status(500).json({ message: err });
             }
             return res.status(200).json({
-                message: "A new set of persons have been added",
+                message: "A new set of documents have been added",
                 data: data.ops,
             });
         });
@@ -88,11 +87,11 @@ app.get("/people/:id", (req, res) => {
                 return res.status(500).json({ message: err });
             } else if (!result) {
                 return res.status(404).json({
-                    message: "Cant find the person with that id",
+                    message: "Can't find a document with the specified id",
                 });
             }
             return res.status(200).json({
-                message: "Data gotten successfully",
+                message: "Document fetched successfully",
                 data: result,
             });
         });
@@ -118,7 +117,7 @@ app.get("/people", (req, res) => {
                     return res.status(500).json({ message: err });
                 }
                 return res.status(200).json({
-                    message: "Documents gotten successfully",
+                    message: "Documents fetched successfully",
                     data: result,
                 });
             });
@@ -167,9 +166,9 @@ app.put("/people/:id", (req, res) => {
                 if (err) {
                     return res.status(500).json({ message: err });
                 } else if (!result["value"]) {
-                    return res
-                        .status(404)
-                        .json({ message: "The person was not found" });
+                    return res.status(404).json({
+                        message: "Can't find a document with the specified id",
+                    });
                 }
                 return res.status(200).json({
                     message: "Document updated successfully",
@@ -215,9 +214,10 @@ app.put("/people", (req, res) => {
                 if (err) {
                     return res.status(500).json({ message: err });
                 } else if (!result) {
-                    return res
-                        .status(404)
-                        .json({ message: "The person was not found" });
+                    return res.status(404).json({
+                        message:
+                            "Can't find a documents with the specified query",
+                    });
                 }
                 return res.status(200).json({
                     message: "Document updated successfully",
@@ -246,9 +246,9 @@ app.delete("/people/:id", (req, res) => {
                 if (err) {
                     return res.status(500).json({ message: err });
                 } else if (!result["value"]) {
-                    return res
-                        .status(404)
-                        .json({ message: "can't find a person with that id" });
+                    return res.status(404).json({
+                        message: "Can't find a document with the specified id",
+                    });
                 }
                 return res.status(200).json({
                     message: "Document deleted successfully",

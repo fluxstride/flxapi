@@ -49,7 +49,7 @@
 
 >"/people" - it is used to read/fetch all documents in the database collection.
 
-### PUT method routes
+### PUT method routes and their use
 
 >"/people/:id" - it is used to update the document with the specified id in the database collection. The request body must be an object which contains the key-value pairs you wish to update.
 <p>Below is an illustration of how the request body should be.
@@ -73,7 +73,7 @@
 
 
 
-### DELETE methods routes
+### DELETE methods routes and their use
 
 >"/people/:id" - used to delete the document with the specified id in the database collection.
 

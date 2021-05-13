@@ -64,7 +64,7 @@ app.post("/people", (req, res) => {
             if (err) {
                 return res.status(500).json({ message: err });
             }
-            let bool ;
+          /*  let bool ;
             people.forEach(person=>{
               if(!person.name && !person.email && !person.country){
               	bool = true;
@@ -75,7 +75,7 @@ app.post("/people", (req, res) => {
             })
             if(bool){
             	return res.status(500).json({message:"Problem with the request body"})
-            }
+            }*/
             return res.status(200).json({
                 message: "A new set of documents have been created",
                 data: {

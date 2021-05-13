@@ -18,7 +18,7 @@
 ### PUT method routes
 
 >"/people/:id" - it is used to update the document with the specified id in the database collection. The request body must be an object which contains the key-value pairs you wish to update.
-<p>Below is an illustration of how the request body should be.</p>
+<p>Below is an illustration of how the request body should be.
 
 ```
 {

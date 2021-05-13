@@ -62,7 +62,12 @@ app.post("/people", (req, res) => {
             }
             return res.status(200).json({
                 message: "A new set of documents have been created",
-                data: data.ops,
+                data: {
+                    data: {
+                        createCount: data.ops.length,
+                        createdDocuments: data.ops,
+                    },
+                },
             });
         });
     });

@@ -19,9 +19,9 @@
 
 ```     
 {
-	"name" : <name value>,
-        "email" : <email value>,
-        "country" : <country value>
+    "name" : <name value>,
+    "email" : <email value>,
+    "country" : <country value>
 }
 ```
 

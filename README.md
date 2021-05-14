@@ -45,7 +45,7 @@
     }
 ]
 ```
-![createPeople](/images/createPeople)
+![createPeople](/images/createPeople.png)
 
 ### GET method routes and their use
 

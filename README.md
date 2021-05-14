@@ -47,6 +47,28 @@
     }
 ]
 ```
+
+<p>e.g
+
+```
+[
+   {
+      "name":"person1",
+      "email":"person1@gmail.com",
+      "country":"country1"
+   },
+   {
+      "name":"person2",
+      "email":"person2@gmail.com",
+      "country":"country2"
+   },
+   {
+      "name":"person3",
+      "email":"person3@gmail.com",
+      "country":"country3"
+   }
+]
+```
 ![createPeople](/images/createPeople.png)
 
 

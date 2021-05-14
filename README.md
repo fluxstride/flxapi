@@ -11,12 +11,19 @@
 
 <p>Note: The request body must be an object containing the following keys ("name","email","country") and these keys can have any value of your choice.
 <p>Below is an illustration of how the request body should be.
-
 ```
 {
     "name": <name value>,
     "email": <email value>,
     "country": <country value>
+}
+```
+<p> Test the route with the example request body below
+```
+{
+   "name":"TestPerson",
+   "email":"TestPerson@gmail.com",
+   "country":"TestCountry"
 }
 ```
 

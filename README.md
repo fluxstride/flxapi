@@ -26,7 +26,7 @@
    "country":"TestCountry"
 }
 ```
-<p>
+<p>-
 
 > `"/people"` - it is used to create a new set of documents.
 

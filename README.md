@@ -18,7 +18,7 @@
     "country": <country value>
 }
 ```
-<p> Test the route with the example request body below
+<p> Test the route with the example request body below</p>
 ```
 {
    "name":"TestPerson",

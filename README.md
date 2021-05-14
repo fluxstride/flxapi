@@ -8,7 +8,7 @@
 
 ### POST method routes and their use
 
-> `"/person"` - it is used to create a new document in the database collection.
+> `1."/person"` - it is used to create a new document in the database collection.
 
 <p>Note: The request body must be an object containing the following keys ("name","email","country") and these keys can have any value of your choice.
 <p>Below is an illustration of how the request body should be.
@@ -32,7 +32,7 @@
 ```
 
 
-> `"/people"` - it is used to create a new set of documents.
+> `2."/people"` - it is used to create a new set of documents.
 
 <p>Note: The request body must be an array of objects contianing the following keys ("name","email","country") and the keys can have any value of your choice.
 

@@ -1,7 +1,7 @@
 # flxapi
 
-> API
-> [link](https://flxapi.herokuapp.com)
+<p> URL
+> [https://flxapi.herokuapp.com](https://flxapi.herokuapp.com)
 
 ## Routes
 

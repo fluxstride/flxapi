@@ -8,7 +8,7 @@
 
 ### POST method routes and their use
 
-> `1."/person"` - it is used to create a new document in the database collection.
+> 1.`"/person"` - it is used to create a new document in the database collection.
 
 <p>Note: The request body must be an object containing the following keys ("name","email","country") and these keys can have any value of your choice.
 <p>Below is an illustration of how the request body should be.
@@ -32,7 +32,7 @@
 ```
 
 
-> `2."/people"` - it is used to create a new set of documents.
+> 2.`"/people"` - it is used to create a new set of documents.
 
 <p>Note: The request body must be an array of objects contianing the following keys ("name","email","country") and the keys can have any value of your choice.
 
@@ -83,16 +83,16 @@
 
 ### GET method routes and their use
 
-> `"/person/:id"` - it is used to read/fetch the document with the specified id. Use this id "609e6c62ce8dfc001578df71" for test.
+> 1.`"/person/:id"` - it is used to read/fetch the document with the specified id. Use this id "609e6c62ce8dfc001578df71" for test.
 [https://flxapi.herokuapp.com/people/609e6c62ce8dfc001578df71](https://flxapi.herokuapp.com/people/609e6c62ce8dfc001578df71)
 
-> `"/people"` - it is used to read/fetch all documents in the database collection.
+> 2.`"/people"` - it is used to read/fetch all documents in the database collection.
 [https://flxapi.herokuapp.com/people](https://flxapi.herokuapp.com/people)
 
 
 ### PUT method routes and their use
 
-> `"/people/:id"` - it is used to update the document with the specified id in the database collection. The request body must be an object which contains the key-value pairs you wish to update.
+> 1.`"/people/:id"` - it is used to update the document with the specified id in the database collection. The request body must be an object which contains the key-value pairs you wish to update.
 
 <p>Below is an illustration of how the request body should be.
 
@@ -114,7 +114,7 @@
 
 
 
-> `"/people"` - used to update documents that match the specified query in the request body.
+> 2.`"/people"` - used to update documents that match the specified query in the request body.
 
 <p>Below is an illustration of how the request body should be.</p>
 
@@ -145,4 +145,4 @@
 
 ### DELETE methods routes and their use
 
-> `"/people/:id"` - used to delete the document with the specified id in the database collection.
+> 1.`"/people/:id"` - used to delete the document with the specified id in the database collection.

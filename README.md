@@ -19,7 +19,16 @@
     "country": <country value>
 }
 ```
-![createPerson](/images/createPerson.png)
+
+<p>example
+
+```
+{
+   "name":"newPerson",
+   "email":"newPerson@gmail.com",
+   "country":"USA"
+}
+```
 
 
 > `"/people"` - it is used to create a new set of documents.

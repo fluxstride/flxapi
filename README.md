@@ -56,6 +56,7 @@
 [https://flxapi.herokuapp.com/people/609e6c62ce8dfc001578df71](https://flxapi.herokuapp.com/people/609e6c62ce8dfc001578df71)
 
 > `"/people"` - it is used to read/fetch all documents in the database collection.
+[https://flxapi.herokuapp.com/people](https://flxapi.herokuapp.com/people)
 
 
 ### PUT method routes and their use

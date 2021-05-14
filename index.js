@@ -129,7 +129,7 @@ app.get("/people", (req, res) => {
                     message: "Documents fetched successfully",
                     data: {   
                                documentsCount: result.length,
-                               documents:resul
+                               documents:result
                           }
                 });
             });

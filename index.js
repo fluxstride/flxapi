@@ -119,7 +119,7 @@ app.get("/people", (req, res) => {
             .toArray((err, result) => {
                 if (!result.length) {
                     return res.status(404).json({
-                        message: "Database is empty pls create a new document",
+                        message: "Database is empty please create a new document",
                     });
                 }
                 if (err) {

@@ -26,6 +26,9 @@ app.post("/person", (req, res) => {
         let db = connectedClient.db("samuel");
 
         let person = req.body;
+        if((!person.name && !person.email && !person.country) || typeof person === "string"){
+            return res.status(500).json({message:"Problem with the request body"})
+        }
         db.collection("db").insertOne(
             {
                 name: person.name,
@@ -63,18 +66,6 @@ app.post("/people", (req, res) => {
             if (err) {
                 return res.status(500).json({ message: err });
             }
-          /*  let bool ;
-            people.forEach(person=>{
-              if(!person.name && !person.email && !person.country){
-              	bool = true;
-              }
-              if(person.name && person.email && person.country){
-              	bool = false
-              }
-            })
-            if(bool){
-            	return res.status(500).json({message:"Problem with the request body"})
-            }*/
             return res.status(200).json({
                 message: "A new set of documents have been created",
                 data: {
@@ -128,7 +119,7 @@ app.get("/people", (req, res) => {
             .toArray((err, result) => {
                 if (!result.length) {
                     return res.status(404).json({
-                        message: "Database is empty",
+                        message: "Database is empty pls create a new document",
                     });
                 }
                 if (err) {

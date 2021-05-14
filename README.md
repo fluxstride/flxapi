@@ -114,7 +114,23 @@
     "update": <update object>
 }
 ```
-![updatePeople](/images/updatePeople.png)
+
+<p>example:
+
+```
+{
+   "query":{
+      "name":"person1",
+      "email":"person1@gmail.com",
+      "country":"country1"
+   },
+   "update":{
+      "name":"updateName",
+      "email":"updateEmail@gmail.com",
+      "country":"updateCountry"
+   }
+}
+```
 
 
 ### DELETE methods routes and their use

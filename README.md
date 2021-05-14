@@ -48,7 +48,7 @@
 ]
 ```
 
-<p>e.g
+<p>example:
 
 ```
 [
@@ -69,7 +69,6 @@
    }
 ]
 ```
-![createPeople](/images/createPeople.png)
 
 
 ### GET method routes and their use
@@ -92,7 +91,17 @@
     <key-value pairs>
 }
 ```
-![updatePerson](/images/updatePerson.png)
+
+<p>example:
+
+```
+{
+   "name":"newName",
+   "email":"newName@gmail.com",
+   "country":"newCountry"
+}
+```
+
 
 
 > `"/people"` - used to update documents that match the specified query in the request body.

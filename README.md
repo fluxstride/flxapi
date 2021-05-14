@@ -18,16 +18,6 @@
     "country": <country value>
 }
 ```
-<p> Test the route with the example request body below</p>
-```
-{
-   "name":"TestPerson",
-   "email":"TestPerson@gmail.com",
-   "country":"TestCountry"
-}
-```
-<p>-
-
 > `"/people"` - it is used to create a new set of documents.
 
 <p>Note: The request body must be an array of objects contianing the following keys ("name","email","country") and the keys can have any value of your choice.

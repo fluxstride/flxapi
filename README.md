@@ -11,6 +11,7 @@
 
 <p>Note: The request body must be an object containing the following keys ("name","email","country") and these keys can have any value of your choice.
 <p>Below is an illustration of how the request body should be.
+
 ```
 {
     "name": <name value>,
@@ -18,9 +19,11 @@
     "country": <country value>
 }
 ```
+
 > `"/people"` - it is used to create a new set of documents.
 
 <p>Note: The request body must be an array of objects contianing the following keys ("name","email","country") and the keys can have any value of your choice.
+
 <p>Below is an illustration of how the request body should be.
 
 ```

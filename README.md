@@ -19,6 +19,7 @@
     "country": <country value>
 }
 ```
+![createPerson](/images/createPerson.png)
 
 > `"/people"` - it is used to create a new set of documents.
 
@@ -64,6 +65,7 @@
     <key-value pairs>
 }
 ```
+![updatePerson](/images/updatePerson.png)
 
 > `"/people"` - used to update documents that match the specified query in the request body.
 
@@ -75,6 +77,7 @@
     "update": <update object>
 }
 ```
+![updatePeople](/images/updatePeople.png)
 
 ### DELETE methods routes and their use
 

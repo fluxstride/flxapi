@@ -127,7 +127,10 @@ app.get("/people", (req, res) => {
                 }
                 return res.status(200).json({
                     message: "Documents fetched successfully",
-                    data: result,
+                    data: {   
+                               documentsCount: result.length,
+                               documents:resul
+                          }
                 });
             });
     });

@@ -52,7 +52,7 @@
 
 ### GET method routes and their use
 
-> `"/person/:id"` - it is used to read/fetch the document with the specified id. Use this id "609d265862db0e00155e5dcd" for test.
+> `"/person/:id"` - it is used to read/fetch the document with the specified id. Use this id "609e6c62ce8dfc001578df71" for test.
 
 > `"/people"` - it is used to read/fetch all documents in the database collection.
 

@@ -1,7 +1,7 @@
-
+require("dotenv").config();
 let express = require("express");
 let { MongoClient, ObjectId } = require("mongodb");
-let connectionString = process.env.MONGODB_URI;
+let connectionString = process.env.MONGODB_URI || process.env.OFF_URI
 
 
 let app = express();
@@ -27,6 +27,10 @@ app.post("/person", (req, res) => {
         let db = connectedClient.db("samuel");
 
         let person = req.body;
+        db.collection("db").findOne({email:person["email"]},(err,data)=>{
+        if(data){
+        	res.json({message:"A document with the specified email already exits, try using another email"})
+        }else if(!data){
         if((!person.name && !person.email && !person.country) || typeof person === "string"){
             return res.status(500).json({message:"Problem with the request body"})
         }
@@ -50,6 +54,8 @@ app.post("/person", (req, res) => {
                 })
             },
         );
+        }
+        })
     });
 });
 // create multiple documents
@@ -62,7 +68,8 @@ app.post("/people", (req, res) => {
         let db = connectedClient.db("samuel");
 
         let people = req.body;
-
+        
+   
         db.collection("db").insertMany([...people], (err, data) => {
             if (err) {
                 return res.status(500).json({ message: err });

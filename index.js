@@ -58,32 +58,7 @@ app.post("/person", (req, res) => {
         })
     });
 });
-// create multiple documents
-app.post("/people", (req, res) => {
-    client.connect((err, connectedClient) => {
-        if (err) {
-            return res.status(500).json({ message: err });
-        }
-        console.log("A successful connection has been made to the db");
-        let db = connectedClient.db("samuel");
 
-        let people = req.body;
-        
-   
-        db.collection("db").insertMany([...people], (err, data) => {
-            if (err) {
-                return res.status(500).json({ message: err });
-            }
-            return res.status(200).json({
-                message: "A new set of documents have been created",
-                data: {
-                    createCount: data.ops.length,
-                    createdDocuments: data.ops,
-                },
-            });
-        });
-    });
-});
 
 // R -> READ
 // fetch a single document
@@ -200,54 +175,6 @@ app.put("/people/:id", (req, res) => {
     });
 });
 
-// update multiple documents that match the specified database query
-app.put("/people", (req, res) => {
-    client.connect((err, connectedClient) => {
-        if (err) {
-            return res.status(500).json({ message: err });
-        }
-        console.log("Connected to db successfully");
-
-        let requestBody = req.body;
-
-        //let query = JSON.parse(req.query.query);
-        console.log(requestBody);
-
-        let updateObj = {};
-        if (requestBody.update.name) {
-            updateObj.name = requestBody.update.name;
-        }
-        if (requestBody.update.email) {
-            updateObj.email = requestBody.update.email;
-        }
-        if (requestBody.update.country) {
-            updateObj.country = requestBody.update.country;
-        }
-
-        let db = connectedClient.db("samuel");
-
-        db.collection("db").updateMany(
-            requestBody["query"],
-            {
-                $set: updateObj,
-            },
-            (err, result) => {
-                if (err) {
-                    return res.status(500).json({ message: err });
-                } else if (!result) {
-                    return res.status(404).json({
-                        message:
-                            "Can't find documents matching the specified query",
-                    });
-                }
-                return res.status(200).json({
-                    message: "Documents updated successfully",
-                    data: { updateCount: result.result.nModified },
-                });
-            },
-        );
-    });
-});
 
 //Delete operation
 // delete a single document 

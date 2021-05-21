@@ -29,7 +29,7 @@ app.post("/person", (req, res) => {
         let person = req.body;
         db.collection("db").findOne({email:person["email"]},(err,data)=>{
         if(data){
-        	res.json({message:"A document with the specified email already exits, try using another email"})
+        	res.status(500).json({message:"A document with the specified email already exits, try using another email"})
         }else if(!data){
         if((!person.name && !person.email && !person.country) || typeof person === "string"){
             return res.status(500).json({message:"Problem with the request body"})

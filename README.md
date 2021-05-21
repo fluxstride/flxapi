@@ -44,7 +44,7 @@
 
 ### PUT method route and its use
 
-> 1.`"/people/:id"` - it is used to update the document with the specified id in the database collection. The request body must be an object which contains the key-value pairs you wish to update.
+> -`"/people/:id"` - it is used to update the document with the specified id in the database collection. The request body must be an object which contains the key-value pairs you wish to update.
 
 <p>Below is an illustration of how the request body should be.
 
@@ -68,4 +68,4 @@
 
 ### DELETE methods route and its use
 
-> 1.`"/people/:id"` - used to delete the document with the specified id in the database collection.
+> -`"/people/:id"` - used to delete the document with the specified id in the database collection.

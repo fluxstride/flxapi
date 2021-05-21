@@ -1,7 +1,7 @@
 require("dotenv").config();
 let express = require("express");
 let { MongoClient, ObjectId } = require("mongodb");
-let connectionString = process.env.MONGODB_URI;
+let connectionString = "mongodb+srv://admin:admin@apis.eqlrf.mongodb.net/api1?retryWrites=true&w=majority" ;
 
 
 let app = express();

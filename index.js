@@ -229,11 +229,11 @@ app.put("/people", (req, res) => {
                 } else if (!result) {
                     return res.status(404).json({
                         message:
-                            "Can't find a documents with the specified query",
+                            "Can't find documents matching the specified query",
                     });
                 }
                 return res.status(200).json({
-                    message: "Document updated successfully",
+                    message: "Documents updated successfully",
                     data: { updateCount: result.result.nModified },
                 });
             },

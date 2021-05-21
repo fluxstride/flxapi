@@ -16,7 +16,7 @@ app.get("/", (req, res) => {
 // initializing CRUD operations
 
 // C -> CREATE
-// Creating a single document
+// create a single document
 app.post("/person", (req, res) => {
     client.connect((err, connectedClient) => {
         if (err) {
@@ -51,7 +51,7 @@ app.post("/person", (req, res) => {
         );
     });
 });
-//Creating multiple documents
+// create multiple documents
 app.post("/people", (req, res) => {
     client.connect((err, connectedClient) => {
         if (err) {
@@ -78,7 +78,7 @@ app.post("/people", (req, res) => {
 });
 
 // R -> READ
-// Getting a single document
+// fetch a single document
 app.get("/people/:id", (req, res) => {
     client.connect((err, connectedClient) => {
         if (err) {
@@ -106,7 +106,7 @@ app.get("/people/:id", (req, res) => {
         });
     });
 });
-// Getting multiple documents
+// fetch multiple documents
 app.get("/people", (req, res) => {
     client.connect((err, connectedClient) => {
         if (err) {
@@ -137,6 +137,7 @@ app.get("/people", (req, res) => {
 });
 
 // U -> UPDATE
+// update a single document
 app.put("/people/:id", (req, res) => {
     client.connect((err, connectedClient) => {
         if (err) {
@@ -191,7 +192,7 @@ app.put("/people/:id", (req, res) => {
     });
 });
 
-// update many documents using a single key-value pair query at a time
+// update multiple documents that match the specified database query
 app.put("/people", (req, res) => {
     client.connect((err, connectedClient) => {
         if (err) {
@@ -241,6 +242,7 @@ app.put("/people", (req, res) => {
 });
 
 //Delete operation
+// delete a single document 
 app.delete("/people/:id", (req, res) => {
     client.connect((err, connectedClient) => {
         let db = connectedClient.db("samuel");
